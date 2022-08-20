@@ -1,0 +1,322 @@
+// ОСНОВНЫЕ
+//Блоки
+$main_bck: #ededed; //цвет заднего фона
+$item_block: #fff; //цвет блока конетента
+$header_clr: #db2504; //цвет header
+//Блоки
+$border-color: #ededed; // цвет hr
+$text-clr: #000; //цвет текста
+$text-clr_active: #1760eb; //цвет активного текста
+$item-white-txt: #fff;
+// ОСНОВНЫЕ
+
+$font-main: "Roboto";
+
+@font-face {
+  font-family: Roboto;
+  src: url("/fonts/fonts1.ttf");
+  font-weight: 400;
+}
+
+body {
+  color: $text-clr;
+  background-color: $main_bck;
+  font-family: $font-main;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  &-item {
+    display: flex;
+    &__link:nth-child(2) {
+      margin: 0 57px;
+    }
+    &__link {
+      cursor: pointer;
+      opacity: 0.7;
+      transition: all 0.5s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  &-account {
+    display: flex;
+    &__text {
+      margin-left: 12px;
+      cursor: pointer;
+      opacity: 0.9;
+      transition: all 0.5s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    margin-left: 9px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 39px;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: all 0.5s;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.content {
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  height: max-content;
+  position: relative;
+  top: 50px;
+  width: 750px;
+  border-radius: 5px;
+  color: white;
+  position: relative;
+  font-weight: 400;
+  padding: 35px 37px;
+  padding-right: 145px;
+
+  z-index: 1;
+  margin-bottom: 80px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.show-roadmap {
+  position: absolute;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  &-exit {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    cursor: pointer;
+  }
+  &-wrapper {
+  }
+}
+
+.header {
+  position: relative;
+}
+
+.card {
+  transition: all 1s;
+  cursor: pointer;
+  transform:scale(0.9);
+  &:hover{
+    transform:scale(1);
+  }
+  &__button {
+    font-family: $font-main;
+    border-radius: 5px;
+    padding: 6px 37px;
+    border: none;
+    cursor: pointer;
+  }
+  &-info {
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 19px;
+    background: linear-gradient(
+      91.95deg,
+      rgba(0, 0, 0, 0.35) 1.14%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(45px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 5px;
+    margin-bottom: 30px;
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      &:not(&:last-child) {
+        margin-right: 62px;
+      }
+      &__text {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.images {
+  position: absolute;
+  right: 14px;
+  top: 10px;
+}
+.title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 62.75px;
+  line-height: 65px;
+}
+.text {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.relative {
+  position: relative;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.roadmap {
+  position: relative;
+  width: max-content;
+  margin: 0 auto;
+  &__button {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: $font-main;
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 41px;
+    cursor: pointer;
+    right: 0;
+    margin: 0 auto;
+    width: max-content;
+  }
+}
+
+.container {
+  padding: 0 57px;
+
+  margin: 0 auto;
+}
+
+.header {
+  background: linear-gradient(
+    243deg,
+    #040506 2.36%,
+    rgba(53, 0, 255, 0.42) 70.59%,
+    #38c2ff 97.98%
+  );
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  color: $border-color;
+  background-color: $border-color;
+}
+
+.clear {
+  position: relative;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+.cards{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-img-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 51px;
+  }
+}
+
+.cards-art{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  background: rgba(171, 221, 248, 0.22);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(45px);
+  /* Note: backdrop-filter has minimal browser support */
+  padding: 21px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+  }
+  &-price {
+    display: flex;
+    img {
+      margin-right: 10px;
+    }
+  }
+}
